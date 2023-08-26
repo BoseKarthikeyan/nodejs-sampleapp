@@ -1,0 +1,12 @@
+kind: ResourceQuota
+apiVersion: v1
+metadata:
+  name: nodejs-sample-quota
+  namespace: nodejs-sample
+spec:
+  hard:
+    services.nodeports: "0"
+    limits.cpu: "8"
+    limits.memory: 16Gi
+    requests.cpu: "8"
+    requests.memory: 16Gi
