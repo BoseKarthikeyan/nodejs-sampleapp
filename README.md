@@ -112,7 +112,7 @@ Kubernetes is an open-source container orchestration platform that automates the
 - creating user with 1001 uid.
 - Making sure all the unwanted files are deleted end of the build, otherwise the size of container will be too big.
 - Doker file location [Dockerfile](https://github.com/BoseKarthikeyan/nodejs-sampleapp/blob/main/Dockerfile)
-- Docker image location [Iamge](quay.io/sample-nodejs/heroku-sample:v1)
+- Docker image location [Image](https://quay.io/sample-nodejs/heroku-sample:v1)
 - Using kustomization to apply the manifest files in the cluster.
 
 ```bash
