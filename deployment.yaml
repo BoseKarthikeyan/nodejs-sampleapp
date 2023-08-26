@@ -1,0 +1,41 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  annotations:
+  name: heroku-sample
+  namespace: nodejs-sample
+  labels:
+    app: heroku
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heroku
+  template:
+    metadata:
+      labels:
+        app: heroku
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/name: clair-db
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+      containers:
+        - name: heroku-container
+          image: 'quay.io/sample-nodejs/heroku-sample:v1'
+          ports:
+            - containerPort: 5001
+              protocol: TCP
+          resources:
+            limits:
+              cpu: '2'
+              memory: 2Gi
+            requests:
+              cpu: 100m
+              memory: 100Mi

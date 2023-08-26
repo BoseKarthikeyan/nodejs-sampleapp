@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: heroku-route
+  namespace: nodejs-sample
+  labels:
+    app: h1
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  host: heroku-nodejs-sample.apps.sb107.caas.gcp.ford.com
+  to:
+    kind: Service
+    name: heroku-svc
+    weight: 100
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+  wildcardPolicy: None

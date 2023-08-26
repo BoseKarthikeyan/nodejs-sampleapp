@@ -1,0 +1,17 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: nodejs-app
+  namespace: nodejs-sample
+spec:
+  rules:
+    - host: myapp.apps.sb107.caas.gcp.ford.com ## need to use http:// while accessing
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: heroku-svc
+                port:
+                  name: http

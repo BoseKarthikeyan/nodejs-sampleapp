@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: heroku-svc
+  namespace: nodejs-sample
+  labels:
+    app: heroku
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 5000
+  type: ClusterIP
+  selector:
+    app: heroku

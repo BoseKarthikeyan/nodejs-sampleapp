@@ -1,0 +1,10 @@
+kind: PodDisruptionBudget
+apiVersion: policy/v1
+metadata:
+  name: sample-pdb
+  namespace: nodejs-sample
+spec:
+  selector:
+    matchLabels:
+      app: heroku
+  maxUnavailable: 1
