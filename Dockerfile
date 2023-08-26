@@ -1,4 +1,3 @@
-# Use the Red Hat Universal Base Image (UBI) 9 as a parent image
 FROM registry.access.redhat.com/ubi9/ubi-minimal@sha256:35c99977ee5baa359bdc80f9ccc360644d2dbccb7462ca0fd97a23170a00cfd1
 
 ARG \
