@@ -6,5 +6,5 @@ resources:
   - ./hpa.yaml
   - ./pdb.yaml
   - ./svc.yaml
-  - ./route.yaml
+  # - ./ingress.yaml
   - ./ns-quota.yaml

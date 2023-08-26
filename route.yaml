@@ -4,7 +4,7 @@ metadata:
   name: heroku-route
   namespace: nodejs-sample
   labels:
-    app: h1
+    app: heroku
   annotations:
     openshift.io/host.generated: 'true'
 spec:
