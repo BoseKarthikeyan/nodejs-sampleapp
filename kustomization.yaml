@@ -7,3 +7,4 @@ resources:
   - ./pdb.yaml
   - ./svc.yaml
   - ./route.yaml
+  - ./ns-quota.yaml
