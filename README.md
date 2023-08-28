@@ -12,7 +12,7 @@
 - Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. 
 - You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
 - Terraform community have already written thousands of providers to manage many different types of resources and services. You can find all publicly available providers on the Terraform Registry, including Amazon Web Services (AWS), Azure, Google Cloud Platform (GCP), Kubernetes, Helm, GitHub, Splunk, DataDog, and many more.
-- Terraform architecture ![Alt text](image.png)
+- Terraform architecture ![Alt text](images/image.png)
 - The Core Terraform consists of three stages
     - Write: You define resources, which may be across multiple cloud providers and services. For example, you might create a configuration to deploy an application on virtual machines in a Virtual Private Cloud (VPC) network with security groups and a load balancer.
     - Plan: Terraform creates an execution plan describing the infrastructure it will create, update, or destroy based on the existing infrastructure and your configuration.
@@ -72,9 +72,9 @@
 - I have used both method for authentication for applying the terraform.
 - I have stored my terraform code in [aks_deployment](https://github.com/BoseKarthikeyan/aks_k8s_tfm)
 - I have created the module for reusability, root moule codes are in main folder and submodules codes are in under example folder.
-- Terraform apply evidence ![Alt text](image-1.png)
-- Terraform apply completed successfully ![Alt text](image-2.png)
-- From Azure console ![Alt text](image-3.png)
+- Terraform apply evidence ![Alt text](images/image-1.png)
+- Terraform apply completed successfully ![Alt text](images/image-2.png)
+- From Azure console ![Alt text](images/image-3.png)
 - I have used Autoscaler configuration. The minimum node set to 2 and maximum set to 4.
 
 ## Deploy nodejs-sampleapp in kubernetes
@@ -97,12 +97,12 @@ Kubernetes is an open-source container orchestration platform that automates the
         - since am using trial namespace am keeping only one pod at same time.
     - Kubernetes service
         - Am using type as loadbalance, so that i can get the external ip and users are able to access the application extenally.
-        - Exterl ipaddress is 4.157.110.135 ![Alt text](image-4.png). Please note that this ipaddress will get changed. since am using free trial i will shutdown the cluster.
+        - Exterl ipaddress is 4.157.110.135 ![Alt text](images/image-4.png). Please note that this ipaddress will get changed. since am using free trial i will shutdown the cluster.
 ## Applciation URL evidence
 - Able to access the application externally
-![Alt text](image-5.png)
+![Alt text](images/image-5.png)
 - Application service ipaddress from Azure portal
-![Alt text](image-6.png)
+![Alt text](images/image-6.png)
 
 ## Container image
 - As a best practise container image should be always small. Have followed the below best practises
